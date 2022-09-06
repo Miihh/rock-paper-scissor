@@ -4,29 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Rock, Paper, Scissor!</title>
+    <link rel="stylesheet" href="./rps.css" />
   </head>
   <body>
-    <div
-      class="rps-game"
-      style="
-        border: 2px solid black;
-        display: flex;
-        justify-content: space-around;
-      "
-    >
+    <div class="rps-game">
       <p id="rps-player1">P1 hand</p>
       <p id="rps-player2">P2 hand</p>
     </div>
     <br />
-    <p id="rps-results" style="margin-left: 50%">Winner</p>
-    <button
-      id="rps-btn"
-      style="margin-top: 20px; margin-left: 50%"
-      onclick="play()"
-    >
-      Play!
-    </button>
+    <p id="rps-results"></p>
+    <button id="rps-btn" onclick="play()">Play!</button>
     <script src="./rps.js"></script>
   </body>
 </html>

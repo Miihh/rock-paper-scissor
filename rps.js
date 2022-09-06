@@ -3,6 +3,7 @@
 let hands = ["rock", "paper", "scissor"];
 let player1 = document.getElementById("rps-player1");
 let player2 = document.getElementById("rps-player2");
+let result = document.getElementById("rps-results");
 
 function getHand() {
   let randomIndex = Math.floor(Math.random() * 3); //trebuie sa cream un index, randomIndex
@@ -24,33 +25,40 @@ function play() {
   player2.textContent = hand2;
 
   if (player1.textContent === hands[0] && player2.textContent === hands[1]) {
+    result.textContent = "Player 2 wins. Paper beats Rock";
     console.log("Player 2 wins. Paper beats Rock");
   } else if (
     player1.textContent === hands[1] &&
     player2.textContent === hands[0]
   ) {
+    result.textContent = "Player 1 wins. Paper beats Rock";
     console.log("Player 1 wins. Paper beats Rock");
   } else if (
     player1.textContent === hands[0] &&
     player2.textContent === hands[2]
   ) {
+    result.textContent = "Player 1 wins. Rock beats Scissor";
     console.log("Player 1 wins. Rock beats Scissor");
   } else if (
     player1.textContent === hands[2] &&
     player2.textContent === hands[0]
   ) {
+    result.textContent = "Player 2 wins. Rock beats Scissor";
     console.log("Player 2 wins. Rock beats Scissor");
   } else if (
     player1.textContent === hands[1] &&
     player2.textContent === hands[2]
   ) {
+    result.textContent = "Player 2 wins. Scissor beats Paper";
     console.log("Player 2 wins. Scissor beats Paper");
   } else if (
-    player1.textContent === "paper" &&
-    player2.textContent === "scissor"
+    player1.textContent === hands[2] &&
+    player2.textContent === hands[1]
   ) {
+    result.textContent = "Player 1 wins. Scissor beats Paper";
     console.log("Player 1 wins. Scissor beats Paper");
   } else {
+    result.textContent = "It's a draw!";
     console.log("It's a draw!");
   }
 }
