@@ -3,7 +3,7 @@
 let hands = ["rock", "paper", "scissor"];
 let player1 = document.getElementById("rps-player1");
 let player2 = document.getElementById("rps-player2");
-let result = document.getElementById("rps-results");
+let result = document.getElementById("rps-game-resultss");
 
 function getHand() {
   let randomIndex = Math.floor(Math.random() * 3); //trebuie sa cream un index, randomIndex
