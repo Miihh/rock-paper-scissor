@@ -4,6 +4,8 @@ let hands = ["rock", "paper", "scissor"];
 let player1 = document.getElementById("rps-player1");
 let player2 = document.getElementById("rps-player2");
 let result = document.getElementById("rps-game-resultss");
+let playBtn = document.getElementById("rps-btn");
+let stillInTheGame = true;
 
 function getHand() {
   let randomIndex = Math.floor(Math.random() * 3); //trebuie sa cream un index, randomIndex
@@ -17,12 +19,11 @@ function getHand2() {
   return hands[randomIndex];
 }
 
-let hand1 = getHand();
-let hand2 = getHand2();
-
 function play() {
-  player1.textContent = hand1;
-  player2.textContent = hand2;
+  player1.textContent = getHand();
+  player2.textContent = getHand2();
+  // nu mai salvam rezultatul functiilor getHand si getHand2 in variabile, pentru ca raman setate pe
+  // rezultatele generate la prima apelare, deci nu va merge functia de reapelare a celor 2 functii mentionate anterior
 
   if (player1.textContent === hands[0] && player2.textContent === hands[1]) {
     result.textContent = "Player 2 wins. Paper beats Rock";
@@ -61,6 +62,7 @@ function play() {
     result.textContent = "It's a draw!";
     console.log("It's a draw!");
   }
+  stillInTheGame = false;
 }
 // OR
 
@@ -80,3 +82,11 @@ function play() {
 //     console.log("It's a draw!");
 //   }
 // }
+
+function restart() {
+  play();
+  if ((stillInTheGame = false)) {
+    play();
+  }
+  playBtn.textContent = "Again!";
+}
