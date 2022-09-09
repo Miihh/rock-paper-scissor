@@ -6,15 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock, Paper, Scissor!</title>
     <link rel="stylesheet" href="./rps.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="rps-game">
-      <p id="rps-player1">P1 hand</p>
-      <p id="rps-player2">P2 hand</p>
+      <p id="rps-player1">Player 1's hand</p>
+      <p id="rps-player2">Player 2's hand</p>
     </div>
     <br />
     <p id="rps-game-resultss"></p>
-    <button id="rps-btn" onclick="restart()">Play!</button>
+    <button
+      class="neumorphic-shadows neumorphic-shadows-hover"
+      id="rps-btn"
+      onclick="restart()"
+    >
+      Play!
+    </button>
     <script src="./rps.js"></script>
   </body>
 </html>

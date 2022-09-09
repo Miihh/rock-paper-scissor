@@ -1,6 +1,6 @@
 // rock, paper, scissors
 
-let hands = ["rock", "paper", "scissor"];
+let hands = ["ROCK", "PAPER", "SCISSOR"];
 let player1 = document.getElementById("rps-player1");
 let player2 = document.getElementById("rps-player2");
 let result = document.getElementById("rps-game-resultss");
