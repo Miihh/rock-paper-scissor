@@ -64,24 +64,6 @@ function play() {
   }
   stillInTheGame = false;
 }
-// OR
-
-//   if (hand1 === hands[0] && hand2 === hands[1]) {
-//     console.log("Player 2 wins. Paper beats Rock");
-//   } else if (hand1 === hands[1] && hand2 === hands[0]) {
-//     console.log("Player 1 wins. Paper beats Rock");
-//   } else if (hand1 === hands[0] && hand2 === hands[2]) {
-//     console.log("Player 1 wins. Rock beats Scissor");
-//   } else if (hand1 === hands[2] && hand2 === hands[0]) {
-//     console.log("Player 2 wins. Rock beats Scissor");
-//   } else if (hand1 === hands[1] && hand2 === hands[2]) {
-//     console.log("Player 2 wins. Scissor beats Paper");
-//   } else if (hand1 === hands[2] && hand2 === hands[1]) {
-//     console.log("Player 1 wins. Scissor beats Paper");
-//   } else {
-//     console.log("It's a draw!");
-//   }
-// }
 
 function restart() {
   play();
