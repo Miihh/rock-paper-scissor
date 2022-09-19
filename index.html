@@ -26,60 +26,139 @@
       <button
         class="neumorphic-shadows neumorphic-shadows-hover"
         id="rps-btn"
-        onclick="restart()"
+        onclick="play()"
       >
         Play!
       </button>
+      <button
+        onclick="restart()"
+        class="neumorphic-shadows neumorphic-shadows-hover"
+        id="restart-btn"
+      >
+        Restart
+      </button>
     </div>
+    <!-- visual representation of players hands -->
     <div class="image-container">
+      <!-- player 1 -->
       <div id="image-1" class="image-1">
         <!-- paper -->
-        <img class="paper pdraw-1" src="./paper-char/paper-draw.png" alt="" />
-        <img class="paper plose-1" src="./paper-char/paper-lose.png" alt="" />
-        <img class="paper pwin-1" src="./paper-char/paper-win.png" alt="" />
+        <img
+          id="pdraw-1"
+          class="paper pdraw-1 img-sizes"
+          src="./paper-char/paper-draw.png"
+          alt=""
+        />
+        <img
+          id="plose-1"
+          class="paper plose-1 img-sizes"
+          src="./paper-char/paper-lose.png"
+          alt=""
+        />
+        <img
+          id="pwin-1"
+          class="paper pwin-1 img-sizes"
+          src="./paper-char/paper-win.png"
+          alt=""
+        />
+
         <!-- rock -->
-        <img class="rock rdraw-1" src="./rock-char/rock-draw.png" alt="" />
-        <img class="rock rlose-1" src="./rock-char/rock-lose.png" alt="" />
-        <img class="rock rwin-1" src="./rock-char/rock-win.png" alt="" />
+        <img
+          id="rdraw-1"
+          class="rock rdraw-1 img-sizes"
+          src="./rock-char/rock-draw.png"
+          alt=""
+        />
+        <img
+          id="rlose-1"
+          class="rock rlose-1 img-sizes"
+          src="./rock-char/rock-lose.png"
+          alt=""
+        />
+        <img
+          id="rwin-1"
+          class="rock rwin-1 img-sizes"
+          src="./rock-char/rock-win.png"
+          alt=""
+        />
+
         <!-- scissor -->
         <img
-          class="scissor sdraw-1"
+          id="sdraw-1"
+          class="scissor sdraw-1 img-sizes"
           src="./scissor-char/scissor-draw.png"
           alt=""
         />
         <img
-          class="scissor slose-1"
+          id="slose-1"
+          class="scissor slose-1 img-sizes"
           src="./scissor-char/scissor-lose.png"
           alt=""
         />
         <img
-          class="scissor swin-1"
+          id="swin-1"
+          class="scissor swin-1 img-sizes"
           src="./scissor-char/scissor-win.png"
           alt=""
         />
       </div>
+      <!--  -->
+      <!-- player 2 -->
       <div id="image-2" class="image-2">
         <!-- paper -->
-        <img class="paper pdraw-2" src="./paper-char/paper-draw.png" alt="" />
-        <img class="paper plose-2" src="./paper-char/paper-lose.png" alt="" />
-        <img class="paper pwin-2" src="./paper-char/paper-win.png" alt="" />
+        <img
+          id="pdraw-2"
+          class="paper pdraw-2 img-sizes"
+          src="./paper-char/paper-draw.png"
+          alt=""
+        />
+        <img
+          id="plose-2"
+          class="paper plose-2 img-sizes"
+          src="./paper-char/paper-lose.png"
+          alt=""
+        />
+        <img
+          id="pwin-2"
+          class="paper pwin-2 img-sizes"
+          src="./paper-char/paper-win.png"
+          alt=""
+        />
         <!-- rock -->
-        <img class="rock rdraw-2" src="./rock-char/rock-draw.png" alt="" />
-        <img class="rock rlose-2" src="./rock-char/rock-lose.png" alt="" />
-        <img class="rock rwin-2" src="./rock-char/rock-win.png" alt="" />
+        <img
+          id="rdraw-2"
+          class="rock rdraw-2 img-sizes"
+          src="./rock-char/rock-draw.png"
+          alt=""
+        />
+        <img
+          id="rlose-2"
+          class="rock rlose-2 img-sizes"
+          src="./rock-char/rock-lose.png"
+          alt=""
+        />
+        <img
+          id="rwin-2"
+          class="rock rwin-2 img-sizes"
+          src="./rock-char/rock-win.png"
+          alt=""
+        />
         <!-- scissor -->
         <img
-          class="scissor sdraw-2"
+          id="sdraw-2"
+          class="scissor sdraw-2 img-sizes"
           src="./scissor-char/scissor-draw.png"
           alt=""
         />
         <img
-          class="scissor slose-2"
+          id="slose-2"
+          class="scissor slose-2 img-sizes"
           src="./scissor-char/scissor-lose.png"
           alt=""
         />
         <img
-          class="scissor swin-2"
+          id="swin-2"
+          class="scissor swin-2 img-sizes"
           src="./scissor-char/scissor-win.png"
           alt=""
         />

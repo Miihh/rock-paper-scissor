@@ -1,3 +1,6 @@
+body {
+  background-image: url(./rps-background.jpg);
+}
 .rps-game {
   border: 2px solid black;
   display: flex;
@@ -19,6 +22,16 @@
   font-size: medium;
   color: #03045e;
 }
+#restart-btn {
+  height: 30px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: #caf0f8;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: medium;
+  color: #03045e;
+}
 
 #rps-game-resultss {
   text-align: center;
@@ -26,13 +39,9 @@
   font-family: "Montserrat", sans-serif;
 }
 
-body {
-  background-color: whitesmoke;
-}
-
 .neumorphic-shadows {
-  -webkit-box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
-  box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+  -webkit-box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px rgb(139, 133, 133);
+  box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px rgb(104, 190, 205);
 }
 
 .neumorphic-shadows-hover:hover {
@@ -51,31 +60,46 @@ body {
 .image-container {
   display: flex;
   margin-top: 30px;
-  border: 2px solid black;
   height: 400px;
   justify-content: space-around;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
 }
 
-.paper {
+.img-sizes {
   height: max-content;
+  padding-top: 50px;
   margin-left: 30px;
-  width: 30%;
-  display: none;
-}
-
-.rock {
-  margin-right: 30px;
-  height: max-content;
-  width: 30%;
-  display: none;
-}
-.scissor {
-  margin-right: 30px;
-  height: max-content;
-  width: 30%;
-  display: none;
+  max-width: 80%;
 }
 
 .image-2 {
   transform: scaleX(-1);
+}
+
+.pdraw-1,
+.plose-1,
+.pwin-1,
+.rdraw-1,
+.rwin-1,
+.rlose-1,
+.swin-1,
+.sdraw-1,
+.slose-1 {
+  display: none;
+}
+
+.pdraw-2,
+.plose-2,
+.pwin-2,
+.rdraw-2,
+.rwin-2,
+.rlose-2,
+.swin-2,
+.sdraw-2,
+.slose-2 {
+  display: none;
 }
