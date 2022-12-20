@@ -10,6 +10,25 @@ let restartBtn = document.getElementById("restart-btn");
 let stillInTheGame = true;
 let p1image = document.getElementById("image-1");
 let p2image = document.getElementById("image-2");
+let imagesContainer = document.getElementById("imagesContainer");
+let imagezz = document.querySelectorAll(".img-sizes");
+let imageArray = [];
+let showArray = imageArray;
+// images variables
+let pwin1 = document.getElementById("pwin-1");
+let pwin2 = document.getElementById("pwin-2");
+let pdraw1 = document.getElementById("pdraw-1");
+let pdraw2 = document.getElementById("pdraw-2");
+let plose1 = document.getElementById("plose-1");
+let plose2 = document.getElementById("plose-2");
+let rwin1 = document.getElementById("rwin-1");
+let rwin2 = document.getElementById("rwin-2");
+let rlose1 = document.getElementById("rlose-1");
+let rlose2 = document.getElementById("rlose-2");
+let slose1 = document.getElementById("slose-1");
+let slose2 = document.getElementById("slose-2");
+let swin1 = document.getElementById("swin-1");
+let swin2 = document.getElementById("swin-2");
 
 restartBtn.style.display = "none";
 function getHand() {
@@ -35,8 +54,9 @@ function play() {
     player2.textContent = "Player 2 has:" + " " + hands[1];
     result.textContent = "Player 2 wins. Paper beats Rock";
     console.log("Player 2 wins. Paper beats Rock");
-    document.getElementById("pwin-2").style.display = "block";
-    document.getElementById("rlose-1").style.display = "block";
+    imageArray = [pwin2, rlose1];
+    pwin2.style.display = "block";
+    rlose1.style.display = "block";
   } else if (
     player1.textContent === hands[1] &&
     player2.textContent === hands[0]
@@ -45,8 +65,9 @@ function play() {
     player2.textContent = "Player 2 has:" + " " + hands[0];
     result.textContent = "Player 1 wins. Paper beats Rock";
     console.log("Player 1 wins. Paper beats Rock");
-    document.getElementById("pwin-1").style.display = "block";
-    document.getElementById("rlose-2").style.display = "block";
+    imageArray = [pwin1, rlose2];
+    pwin1.style.display = "block";
+    rlose2.style.display = "block";
   } else if (
     player1.textContent === hands[0] &&
     player2.textContent === hands[2]
@@ -55,8 +76,9 @@ function play() {
     player2.textContent = "Player 2 has:" + " " + hands[2];
     result.textContent = "Player 1 wins. Rock beats Scissor";
     console.log("Player 1 wins. Rock beats Scissor");
-    document.getElementById("rwin-1").style.display = "block";
-    document.getElementById("slose-2").style.display = "block";
+    imageArray = [rwin1, slose2];
+    rwin1.style.display = "block";
+    slose2.style.display = "block";
   } else if (
     player1.textContent === hands[2] &&
     player2.textContent === hands[0]
@@ -65,8 +87,9 @@ function play() {
     player2.textContent = "Player 2 has:" + " " + hands[0];
     result.textContent = "Player 2 wins. Rock beats Scissor";
     console.log("Player 2 wins. Rock beats Scissor");
-    document.getElementById("rwin-2").style.display = "block";
-    document.getElementById("slose-1").style.display = "block";
+    imageArray = [rwin2, slose1];
+    rwin2.style.display = "block";
+    slose1.style.display = "block";
   } else if (
     player1.textContent === hands[1] &&
     player2.textContent === hands[2]
@@ -75,8 +98,9 @@ function play() {
     player2.textContent = "Player 2 has:" + " " + hands[2];
     result.textContent = "Player 2 wins. Scissor beats Paper";
     console.log("Player 2 wins. Scissor beats Paper");
-    document.getElementById("plose-1").style.display = "block";
-    document.getElementById("swin-2").style.display = "block";
+    imageArray = [plose1, swin2];
+    plose1.style.display = "block";
+    swin2.style.display = "block";
   } else if (
     player1.textContent === hands[2] &&
     player2.textContent === hands[1]
@@ -85,23 +109,26 @@ function play() {
     player2.textContent = "Player 2 has:" + " " + hands[1];
     result.textContent = "Player 1 wins. Scissor beats Paper";
     console.log("Player 1 wins. Scissor beats Paper");
-    document.getElementById("swin-1").style.display = "block";
-    document.getElementById("plose-2").style.display = "block";
+    imageArray = [swin1, plose2];
+    swin1.style.display = "block";
+    plose2.style.display = "block";
   } else {
     player1.textContent = "Player 1 has:" + " " + player1.textContent;
     player2.textContent = "Player 2 has:" + " " + player2.textContent;
     result.textContent = "It's a draw!";
     console.log("It's a draw!");
-    document.getElementById("pdraw-1").style.display = "block";
-    document.getElementById("pdraw-2").style.display = "block";
+    imageArray = [pdraw1, pdraw2];
+    pdraw1.style.display = "block";
+    pdraw2.style.display = "block";
   }
 
   playBtn.style.display = "none";
   stillInTheGame = false;
   restartBtn.style.display = "";
+  console.log("THE PLAY FUNCTION HAS BEEN CALLED");
 }
-// trebuie adaugate conditii pentru draw( paper draw, rock draw si scissor draw) ca sa afiseze imaginile corespunzatoare
 
 function restart() {
-  contentDiv.textContent = play();
+  play();
+  
 }
